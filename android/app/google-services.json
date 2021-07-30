@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1025148301193",
+    "firebase_url": "https://rohit-brew-crew.firebaseio.com",
+    "project_id": "rohit-brew-crew",
+    "storage_bucket": "rohit-brew-crew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025148301193:android:84d96f74a33539f6173b58",
+        "android_client_info": {
+          "package_name": "com.rohit.brew_crew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025148301193-h8neus6rrqquni96d1e3dfirvfoujvm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4AlNl_sWTHlOC4xSPyTUhS7b6l6u_I4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025148301193-h8neus6rrqquni96d1e3dfirvfoujvm2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
