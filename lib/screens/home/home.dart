@@ -7,18 +7,19 @@ import 'package:brew_crew/screens/home/brew_list.dart';
 import 'package:brew_crew/models/brew.dart';
 
 class Home extends StatelessWidget {
-  final AuthService _authService=AuthService();
+  final AuthService _authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
-
-    void _showSettingsPanel(){
-      showModalBottomSheet(context: context, builder:(context){
+    void _showSettingsPanel() {
+      showModalBottomSheet(
+          context: context,
+          builder: (context) {
             return Container(
-              padding: EdgeInsets.symmetric(vertical: 20,horizontal: 60),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
               child: SettingsForm(),
             );
-      });
+          });
     }
 
     return StreamProvider<List<Brew>>.value(
@@ -31,34 +32,25 @@ class Home extends StatelessWidget {
           elevation: 0,
           actions: <Widget>[
             FlatButton.icon(
-              // sign out functionality
-                onPressed:() async {
+                // sign out functionality
+                onPressed: () async {
                   await _authService.signOut();
                 },
                 icon: Icon(Icons.person),
-                label: Text('Sign Out')
-            ),
-
+                label: Text('Sign Out')),
             FlatButton.icon(
-                onPressed: ()=>_showSettingsPanel(),
+                onPressed: () => _showSettingsPanel(),
                 icon: Icon(Icons.settings),
                 label: Text('Settings'))
           ],
         ),
-
         body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/coffee_bg.png'),
-              fit: BoxFit.cover
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/coffee_bg.png'), fit: BoxFit.cover),
             ),
-          ),
-            child: BrewList(
-            )
-        ),
-
+            child: BrewList()),
       ),
     );
-
   }
 }
